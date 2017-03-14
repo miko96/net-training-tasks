@@ -1,0 +1,6 @@
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\01-DesignGuideline\src\bin\Debug\codestlib.xml
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\01-DesignGuideline\src\bin\Debug\codestlib.dll
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\01-DesignGuideline\src\bin\Debug\codestlib.pdb
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\01-DesignGuideline\src\obj\Debug\CODEST.csprojResolveAssemblyReference.cache
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\01-DesignGuideline\src\obj\Debug\codestlib.dll
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\01-DesignGuideline\src\obj\Debug\codestlib.pdb

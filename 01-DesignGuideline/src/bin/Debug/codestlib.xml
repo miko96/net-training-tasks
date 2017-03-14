@@ -1,0 +1,1224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>codestlib</name>
+    </assembly>
+    <members>
+        <member name="T:codest.NullParamEvent">
+            <summary>
+            ÎÞ²ÎÊýÇÒÎÞ·µ»ØÖµµÄÍÐ¹ÜÀàÐÍ
+            </summary>
+        </member>
+        <member name="T:codest.BaseClass">
+            <summary>
+            IcyplayerËùÓÐÀàµÄ»ùÀà
+            ÊµÏÖIDisposable, ICloneable½Ó¿Ú
+            </summary>
+        </member>
+        <member name="F:codest.BaseClass.components">
+            <summary>
+            ÍÐ¹Ü×ÊÔ´ÈÝÆ÷
+            </summary>
+        </member>
+        <member name="F:codest.BaseClass.disposed">
+            <summary>
+            Ö¸Ê¾¶ÔÏóÊÇ·ñÒÑ¾­Îö¹¹
+            </summary>
+        </member>
+        <member name="M:codest.BaseClass.#ctor">
+            <summary>
+            BaseClass¹¹Ôìº¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.BaseClass.Finalize">
+            <summary>
+            BaseClassÎö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.BaseClass.Dispose(System.Boolean)">
+            <summary>
+            ³·Ïú¶ÔÏó
+            </summary>
+            <param name="disposing">false£ºÏµÍ³µ÷ÓÃ£¬true£ºÊÖ¶¯µ÷ÓÃ</param>
+        </member>
+        <member name="M:codest.BaseClass.Clone">
+            <summary>
+            Íê³É¶ÔÏóµÄÇ³¸´ÖÆ
+            </summary>
+            <returns>¶ÔÏóµÄ¸±±¾</returns>
+        </member>
+        <member name="M:codest.BaseClass.Dispose">
+            <summary>
+            ÏÔÊ½³·Ïú¶ÔÏó
+            </summary>
+        </member>
+        <member name="T:codest.Net.Web.WebUploader">
+            <summary>   
+            ¸ÃÀàÊµÏÖÁËÎÄ¼þÉÏ´«¹¦ÄÜ£¬ÐèÒªÖ¸¶¨HtmlInputFile ¿Ø¼þ   
+            ¹¦ÄÜ1£º¿ÉÒÔ¶ÔÎÄ¼þÀàÐÍ½øÐÐÏÞÖÆ   
+            ¹¦ÄÜ2£º¿ÉÒÔ¶ÔÎÄ¼þ´óÐ¡ÉÏÏÞ½øÐÐÏÞÖÆ   
+               
+            example:   
+             WebUploader up;   
+             up = new WebUploader(HtmlInputFile1);   
+             up.SvaePath = "c:\\inetpub\\wwwroot\\upload\\"; //±ØÐëÖ¸¶¨£¬±£´æÎÄ¼þµÄÂ·¾¶   
+             up.AllowExtFile = ".jpg;.gif;"; //ÔÊÐíµÄÀàÐÍ   
+             up.MaxSize = 500 * 1024; //´óÐ¡ÏÞÖÆ500k   
+             up.NewFileName = "newfile1"; //Ö¸¶¨ÐÂµÄÎÄ¼þÃû£¬²»Ö¸¶¨Ôò²»ÐÞ¸Ä   
+             int errcode = up.Start(); //¿ªÊ¼ÉÏ´«   
+             string errmsg = up.GetErr(errcode); //»ñµÃ´íÎóÃèÊöÐÅÏ¢   
+             Response.write(errmsg);¡¡//ÏÔÊ¾´íÎóÐÅÏ¢   
+            </summary>   
+        </member>
+        <member name="P:codest.Net.Web.WebUploader.SavePath">
+            <summary>
+            »ñÈ¡»òÖ¸¶¨ÎÄ¼þ±£´æÂ·¾¶   
+            </summary>
+        </member>
+        <member name="P:codest.Net.Web.WebUploader.MaxSize">
+            <summary>
+            »ñÈ¡»òÖ¸¶¨ÎÄ¼þ´óÐ¡ÉÏÏÞ
+            </summary>
+        </member>
+        <member name="P:codest.Net.Web.WebUploader.AllowExtFile">
+            <summary>
+            »ñÈ¡»òÖ¸¶¨ÔÊÐíµÄÎÄ¼þºó×ºÁÐ±í£¬ÓÃ¡°£»¡±·Ö¸î£¬°üº¬¡°.¡±   
+            </summary>
+        </member>
+        <member name="P:codest.Net.Web.WebUploader.NewFileName">
+            <summary>
+            »ñÈ¡»òÖ¸¶¨ÐÂµÄÎÄ¼þÃû£¬²»°üº¬ºó×º   
+            </summary>
+        </member>
+        <member name="P:codest.Net.Web.WebUploader.FileSource">
+            <summary>
+            »ñÈ¡»òÖ¸¶¨HtmlInputFile¿Ø¼þ   
+            </summary>
+        </member>
+        <member name="M:codest.Net.Web.WebUploader.#ctor">
+            <summary>
+            ¹¹Ôìº¯Êý£¬²»Ö¸¶¨ÈÎºÎÊý¾Ý   
+            </summary>
+        </member>
+        <member name="M:codest.Net.Web.WebUploader.#ctor(System.Web.UI.HtmlControls.HtmlInputFile)">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+            <param name="scrFile">HtmlInputFile ¿Ø¼þ</param>
+        </member>
+        <member name="M:codest.Net.Web.WebUploader.#ctor(System.Web.UI.HtmlControls.HtmlInputFile,System.String)">
+            <summary>
+            ¹¹Ôìº¯Êý£¬ÉÏ´«ºóÎÄ¼þÃû²»×÷ÐÞ¸Ä   
+            </summary>
+            <param name="scrFile">HtmlInputFile ¿Ø¼þ</param>
+            <param name="SavePath">±£´æÂ·¾¶</param>
+        </member>
+        <member name="M:codest.Net.Web.WebUploader.#ctor(System.Web.UI.HtmlControls.HtmlInputFile,System.String,System.String)">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+            <param name="scrFile">HtmlInputFile ¿Ø¼þ</param>
+            <param name="SavePath">±£´æÂ·¾¶</param>
+            <param name="NewFileName">ÐÂµÄÎÄ¼þÃû£¨²»°üº¬ºó×º£©</param>
+        </member>
+        <member name="M:codest.Net.Web.WebUploader.CheckExt">
+            <summary>
+            ¼ì²âºó×ºÊÇ·ñ·ûºÏÒªÇó
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Net.Web.WebUploader.Start">
+            <summary>
+            ×¼±¸¾ÍÐ÷ºó£¬¿ªÊ¼ÉÏ´«
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Net.Web.WebUploader.GetErr(System.Int32)">
+            <summary>
+            µ÷ÓÃstart()ºó£¬Èô·µ»ØÖµ²»Îª0£¬µ÷ÓÃ¿É»ñÈ¡´íÎóÐÅÏ¢   
+            </summary>
+            <param name="errCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:codest.Net.Web.HTTPRequest">
+            <summary>
+            ·¢ÆðHTTPÇëÇó²¢»ñµÃÏìÓ¦½á¹ûµÄÀà
+            </summary>
+        </member>
+        <member name="F:codest.Net.Web.HTTPRequest.currentCookies">
+            <summary>
+            ±£´æµ±Ç°Á¬½ÓµÄHTTP Cookies
+            </summary>
+        </member>
+        <member name="P:codest.Net.Web.HTTPRequest.DomainURL">
+            <summary>
+            ÍøÕ¾¸ùÂ·¾¶£¬Èç£ºhttp://www.easybroad.com£¬×îºó²»ÐèÒª¡°/¡±
+            </summary>
+        </member>
+        <member name="M:codest.Net.Web.HTTPRequest.#ctor">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Net.Web.HTTPRequest.#ctor(System.String)">
+            <summary>
+            ¹¹Ôì£¬²¢ÉèÖÃÍøÕ¾¸ùÂ·¾¶
+            Èç£ºhttp://www.easybroad.com
+            ×îºó²»ÐèÒª¡°/¡±
+            </summary>
+            <param name="domainURL">ÍøÕ¾¸ùÂ·¾¶</param>
+        </member>
+        <member name="M:codest.Net.Web.HTTPRequest.Finalize">
+            <summary>
+            Îö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Net.Web.HTTPRequest.Dispose(System.Boolean)">
+            <summary>
+            ÊÍ·ÅÓÉµ±Ç°¶ÔÏó¿ØÖÆµÄËùÓÐ×ÊÔ´
+            </summary>
+            <param name="disposing">ÏÔÊ½µ÷ÓÃ</param>
+        </member>
+        <member name="M:codest.Net.Web.HTTPRequest.GetFullURL(System.String)">
+            <summary>
+            ¸ù¾ÝÏà¶ÔÂ·¾¶»ñÈ¡ÍêÕûµÄURL
+            </summary>
+            <param name="path">Ïà¶ÔÂ·¾¶£¬Èç¡°/login.aspx¡±</param>
+            <returns>ÍêÕûµÄURL</returns>
+        </member>
+        <member name="M:codest.Net.Web.HTTPRequest.RefreshCookies">
+            <summary>
+            ¶Ï¿ª»á»°£¬Ë¢ÐÂµ±Ç°Session¼°Cookies
+            </summary>
+        </member>
+        <member name="M:codest.Net.Web.HTTPRequest.GetData(System.String)">
+            <summary>
+            Ê¹ÓÃ HTTP_GET ·½·¨»ñÈ¡Êý¾Ý
+            </summary>
+            <param name="path">Ïà¶ÔÂ·¾¶£¬Èç¡°/index.aspx¡±</param>
+            <returns>HTTPÏìÓ¦½á¹û</returns>
+        </member>
+        <member name="M:codest.Net.Web.HTTPRequest.PostData(System.String,System.String)">
+            <summary>
+            Ê¹ÓÃ HTTP_POST ·½·¨»ñÈ¡Êý¾Ý
+            </summary>
+            <param name="path">Ïà¶ÔÂ·¾¶£¬Èç¡°/login.aspx¡±</param>
+            <param name="data">ÐèÒªPOSTµÄÊý¾Ý</param>
+            <returns>HTTPÏìÓ¦½á¹û</returns>
+        </member>
+        <member name="T:codest.Net.Sockets.TCPClient">
+            <summary>
+            TCP¿Í»§¶Ë
+            </summary>
+        </member>
+        <member name="P:codest.Net.Sockets.TCPClient.LocalPort">
+            <summary>
+            ±¾µØ°ó¶¨µÄ¶Ë¿Ú
+            </summary>
+        </member>
+        <member name="P:codest.Net.Sockets.TCPClient.RemotePort">
+            <summary>
+            Á¬½ÓµÄÔ¶³Ì¶Ë¿Ú
+            </summary>
+        </member>
+        <member name="P:codest.Net.Sockets.TCPClient.RemoteIP">
+            <summary>
+            Á¬½ÓµÄÔ¶³ÌIPµØÖ·
+            </summary>
+        </member>
+        <member name="E:codest.Net.Sockets.TCPClient.OnConnect">
+            <summary>
+            µ±ÇëÇóµÄÁ¬½Ó³É¹¦
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPClient.#ctor">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPClient.Finalize">
+            <summary>
+            Îö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPClient.Dispose(System.Boolean)">
+            <summary>
+            ÊÍ·ÅÓÉµ±Ç°¶ÔÏó¿ØÖÆµÄËùÓÐ×ÊÔ´
+            </summary>
+            <param name="disposing">ÏÔÊ½µ÷ÓÃ</param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPClient.OnConnectEvent(System.Boolean)">
+            <summary>
+            Connect»Øµ÷
+            </summary>
+            <param name="flag">Á¬½ÓÊÇ·ñ³É¹¦</param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPClient.EndConnect(System.IAsyncResult)">
+            <summary>
+            Òì²½Connect½áÊø
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPClient.Connect(System.String,System.Int32)">
+            <summary>
+            Á¬½ÓÔ¶³Ì·þÎñÆ÷
+            </summary>
+            <param name="remoteAddress">·þÎñÆ÷µØÖ·</param>
+            <param name="remotePort">·þÎñÆ÷¶Ë¿Ú</param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPClient.Create(System.Int32)">
+            <summary>
+            ´´½¨socket
+            </summary>
+            <param name="LocalPort">±¾µØ¶Ë¿Ú</param>
+            <returns>ÊÇ·ñ³É¹¦</returns>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPClient.GetHostNameByIP(System.String)">
+            <summary>
+            Í¨¹ýIP²éÕÒÖ÷»úÃû
+            </summary>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPClient.GetIPByHostName(System.String)">
+            <summary>
+            Í¨¹ýÖ÷»úÃû²éÕÒIPµØÖ·
+            </summary>
+            <param name="hostName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:codest.Net.Sockets.DataArriveEvent">
+            <summary>
+            Êý¾Ýµ½´ï½øÐÐ´¦ÀíµÄº¯ÊýµÄÎ¯ÍÐ
+            </summary>
+            <param name="tcpThread">µ±Ç°tcp»á»°¶ÔÏó</param>
+            <param name="buffer">Êý¾Ý</param>
+        </member>
+        <member name="T:codest.Net.Sockets.TCPManager">
+            <summary>
+            Ìá¹©TCPÁ¬½Ó·þÎñ¶ËµÄÀà
+            </summary>
+        </member>
+        <member name="F:codest.Net.Sockets.TCPManager.OnClientDataArrive">
+            <summary>
+            ¿Í»§¶ËÊý¾ÝÍ¨ÖªÊÂ¼þ
+            </summary>
+        </member>
+        <member name="P:codest.Net.Sockets.TCPManager.Socket">
+            <summary>
+            ·µ»Øµ±Ç°Socket
+            </summary>
+        </member>
+        <member name="P:codest.Net.Sockets.TCPManager.LocalPort">
+            <summary>
+            »ñÈ¡µ±Ç°Á¬½ÓµÄ±¾µØTCP¶Ë¿Ú
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPManager.#ctor">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPManager.Finalize">
+            <summary>
+            Îö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPManager.Dispose(System.Boolean)">
+            <summary>
+            ÊÍ·ÅÓÉµ±Ç°¶ÔÏó¿ØÖÆµÄËùÓÐ×ÊÔ´
+            </summary>
+            <param name="disposing">ÏÔÊ½µ÷ÓÃ</param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPManager.OnClientDataArriveEvent(codest.Net.Sockets.TCPThread,System.Byte[])">
+            <summary>
+            µ±ÓÐÊÕµ½¿Í»§¶ËÊý¾ÝÊ±£¬´¥·¢Òì²½»Øµ÷º¯Êý
+            </summary>
+            <param name="tcpThread"></param>
+            <param name="buffer"></param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPManager.OnAccept(System.IAsyncResult)">
+            <summary>
+            µ±ÓÐÁ¬½ÓÇëÇó½ÓÈëÊ±£¬´¥·¢Òì²½»Øµ÷º¯Êý
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPManager.Create(System.Int32)">
+            <summary>
+            ´´½¨Socket
+            </summary>
+            <param name="LocalPort">±¾µØTCP¶Ë¿Ú</param>
+            <returns>´´½¨ÊÇ·ñ³É¹¦</returns>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPManager.Close">
+            <summary>
+            ¹Ø±ÕSocketÁ¬½Ó
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPManager.BeginAccept">
+            <summary>
+            Ö¸Ê¾Socket¿ÉÒÔ¿ªÊ¼´¦ÀíÁ¬½ÓÇëÇóÁË
+            </summary>
+            <returns>µ÷ÓÃÊÇ·ñ³É¹¦</returns>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPManager.EndAccept">
+            <summary>
+            Ö¸Ê¾SocketÍ£Ö¹´¦ÀíÁ¬½ÓÇëÇó
+            </summary>
+            <returns>µ÷ÓÃÊÇ·ñ³É¹¦</returns>
+        </member>
+        <member name="T:codest.Net.Sockets.TCPThread">
+            <summary>
+            TCPÁ¬½Ó¿ØÖÆÀà
+            </summary>
+        </member>
+        <member name="F:codest.Net.Sockets.TCPThread.socket">
+            <summary>
+            Socket
+            </summary>
+        </member>
+        <member name="F:codest.Net.Sockets.TCPThread.BUFFER_SIZE">
+            <summary>
+            ½ÓÊÕÊý¾ÝµÄ»º³åÇø´óÐ¡£¬Îª100K
+            </summary>
+        </member>
+        <member name="F:codest.Net.Sockets.TCPThread._buffer">
+            <summary>
+            ½ÓÊÕÊý¾ÝµÄ»º³åÇø
+            </summary>
+        </member>
+        <member name="F:codest.Net.Sockets.TCPThread.connected">
+            <summary>
+            Ö¸Ê¾SocketÊÇ·ñÁ¬½Ó
+            </summary>
+        </member>
+        <member name="P:codest.Net.Sockets.TCPThread.Connected">
+            <summary>
+            Ö¸Ê¾SocketÊÇ·ñÁ¬½Ó
+            </summary>
+        </member>
+        <member name="P:codest.Net.Sockets.TCPThread.Socket">
+            <summary>
+            Socket
+            </summary>
+        </member>
+        <member name="E:codest.Net.Sockets.TCPThread.OnDataArrive">
+            <summary>
+            Êý¾Ýµ½´ïµÄÊÂ¼þ´¦Àí
+            </summary>
+        </member>
+        <member name="E:codest.Net.Sockets.TCPThread.OnError">
+            <summary>
+            µ±·ÃÎÊ³ö´í
+            </summary>
+        </member>
+        <member name="E:codest.Net.Sockets.TCPThread.OnClose">
+            <summary>
+            µ±Á¬½Ó±»¹Ø±Õ
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.#ctor(System.Net.Sockets.Socket)">
+            <summary>
+            TCPThread¹¹Ôìº¯Êý£¬´«ÈëÄ¬ÈÏsocketÁ¬½Ó
+            </summary>
+            <param name="sock">socketÁ¬½Ó</param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.#ctor">
+            <summary>
+            TCPThread¹¹Ôìº¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.Finalize">
+            <summary>
+            TCPThreadÎö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.Dispose(System.Boolean)">
+            <summary>
+            ÊÍ·ÅÓÉµ±Ç°¶ÔÏó¿ØÖÆµÄËùÓÐ×ÊÔ´
+            </summary>
+            <param name="disposing">ÏÔÊ½µ÷ÓÃ</param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.OnErrorEvent(System.Int32)">
+            <summary>
+            µ±socket³ö´í
+            </summary>
+            <param name="errNum">´íÎó±àºÅ</param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.OnCloseEvent">
+            <summary>
+            socketÒÑ¾­¹Ø±Õ
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.OnDataArriveEvent(codest.Net.Sockets.TCPThread,System.Byte[])">
+            <summary>
+            Êý¾Ýµ½´ïÊÂ¼þ
+            </summary>
+            <param name="tcpThread">µ±Ç°tcp»á»°socket</param>
+            <param name="buffer">Êý¾Ý</param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.OnReceive(System.IAsyncResult)">
+            <summary>
+            Êý¾Ýµ½´ïµÄÒì²½´¦Àíº¯Êý
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.OnEndSend(System.IAsyncResult)">
+            <summary>
+            Òì²½·¢ËÍÊý¾ÝÍê³É
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.BeginReceive">
+            <summary>
+            Ö¸Ê¾Socket¿ÉÒÔ¿ªÊ¼½ÓÊÕÊý¾Ý
+            </summary>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.Send(System.Byte[])">
+            <summary>
+            ·¢ËÍ¶þ½øÖÆÊý¾Ý
+            </summary>
+            <param name="data">ÐèÒª·¢ËÍµÄÊý¾Ý</param>
+        </member>
+        <member name="M:codest.Net.Sockets.TCPThread.Send(System.String)">
+            <summary>
+            ·¢ËÍ×Ö·û´®Êý¾Ý
+            </summary>
+            <param name="StringData">ÐèÒª·¢ËÍµÄÊý¾Ý</param>
+        </member>
+        <member name="T:codest.Net.WebService.WebServiceInvoker">
+            <summary>
+            ÊµÏÖ¶¯Ì¬µ÷ÓÃWeb Service
+            </summary>
+        </member>
+        <member name="M:codest.Net.WebService.WebServiceInvoker.InvokeWebService(System.String,System.String,System.Object[])">
+            <summary>
+            ¶¯Ì¬µ÷ÓÃWeb Service
+            </summary>
+            <param name="url">Web ServiceµÄURLµØÖ·</param>
+            <param name="methodname">Òªµ÷ÓÃWeb ServiceµÄ·½·¨Ãû³Æ</param>
+            <param name="args">Òªµ÷ÓÃWeb ServiceµÄ²ÎÊýÁÐ±í</param>
+            <returns>·½·¨´¦Àí½á¹û</returns>
+        </member>
+        <member name="M:codest.Net.WebService.WebServiceInvoker.InvokeWebService(System.String,System.String,System.Object)">
+            <summary>
+            ¶¯Ì¬µ÷ÓÃWeb Service£¬´«Èëµ¥¸ö²ÎÊý
+            </summary>
+            <param name="url">Web ServiceµÄURLµØÖ·</param>
+            <param name="methodname">µ÷ÓÃWeb ServiceµÄ·½·¨Ãû³Æ</param>
+            <param name="arg">Òªµ÷ÓÃWeb ServiceµÄ²ÎÊý</param>
+            <returns>·½·¨´¦Àí½á¹û</returns>
+        </member>
+        <member name="M:codest.Net.WebService.WebServiceInvoker.InvokeWebService(System.String,System.String,System.String,System.Object[])">
+            <summary>
+            ¶¯Ì¬µ÷ÓÃWeb Service
+            </summary>
+            <param name="url">Web ServiceµÄURLµØÖ·</param>
+            <param name="classname">Òªµ÷ÓÃWeb ServiceµÄÀàµÄÃû³Æ</param>
+            <param name="methodname">Òªµ÷ÓÃWeb ServiceµÄ·½·¨Ãû³Æ</param>
+            <param name="args">Òªµ÷ÓÃWeb ServiceµÄ²ÎÊýÁÐ±í</param>
+            <returns>·½·¨´¦Àí½á¹û</returns>
+        </member>
+        <member name="M:codest.Net.WebService.WebServiceInvoker.GetWsClassName(System.String)">
+            <summary>
+            Í¨¹ýWeb ServiceµÄURL»ñÈ¡ÀàÃû
+            </summary>
+            <param name="wsUrl">Web ServiceµÄURLµØÖ·</param>
+            <returns>Web ServiceµÄÀàÃû</returns>
+        </member>
+        <member name="T:codest.SerializableBaseClass`1">
+            <summary>
+            Îª¶ÔÏóÌá¹©XMLÐòÁÐ»¯¡¢¶þ½øÖÆÐòÁÐ»¯¼°·´ÐòÁÐ»¯¹¦ÄÜ
+            ÊµÏÖÁËICloneable½Ó¿Ú
+            </summary>
+            <typeparam name="T">¼Ì³ÐÀàµÄÀàÐÍ</typeparam>
+        </member>
+        <member name="M:codest.SerializableBaseClass`1.BinarySerialize">
+            <summary>
+            ¶ÔÀà½øÐÐ¶þ½øÖÆÐòÁÐ»¯
+            </summary>
+            <returns>ÐòÁÐ»¯´úÂë</returns>
+        </member>
+        <member name="M:codest.SerializableBaseClass`1.XMLSerialize">
+            <summary>
+            ¶ÔÀà½øÐÐXMLÐòÁÐ»¯
+            </summary>
+            <returns>XMLÐòÁÐ»¯´úÂë</returns>
+        </member>
+        <member name="M:codest.SerializableBaseClass`1.DeSerialize(System.Byte[])">
+            <summary>
+            ¶ÔÀà½øÐÐ¶þ½øÖÆ·´ÐòÁÐ»¯
+            </summary>
+            <param name="binary">¶þ½øÖÆÐòÁÐ»¯´úÂë</param>
+            <returns>·´ÐòÁÐ»¯ºóµÄ¶ÔÏó£¬ÈôÊ§°ÜÔò·µ»Ønull</returns>
+        </member>
+        <member name="M:codest.SerializableBaseClass`1.DeSerialize(System.String)">
+            <summary>
+            ¶ÔÀà½øÐÐXML·´ÐòÁÐ»¯
+            </summary>
+            <param name="xmlString">XMLÐòÁÐ»¯´úÂë</param>
+            <returns>·´ÐòÁÐ»¯ºóµÄ¶ÔÏó£¬ÈôÊ§°ÜÔò·µ»Ønull</returns>
+        </member>
+        <member name="M:codest.SerializableBaseClass`1.TryDeSerialize(System.Byte[],`0@)">
+            <summary>
+            ³¢ÊÔÊ¹ÓÃ¶þ½øÖÆÊý¾Ý¶ÔÀà½øÐÐ·´ÐòÁÐ»¯
+            </summary>
+            <param name="binary">ÐòÁÐ»¯¶þ½øÖÆÊý¾Ý</param>
+            <param name="obj">·µ»Ø¶ÔÏóÒýÓÃ</param>
+            <returns>·´ÐòÁÐ»¯ÊÇ·ñ³É¹¦</returns>
+        </member>
+        <member name="M:codest.SerializableBaseClass`1.TryDeSerialize(System.String,`0@)">
+            <summary>
+            ³¢ÊÔÊ¹ÓÃXMLÊý¾Ý¶ÔÀà½øÐÐ·´ÐòÁÐ»¯
+            </summary>
+            <param name="xmlString">ÐòÁÐ»¯XMLÊý¾Ý</param>
+            <param name="obj">·µ»Ø¶ÔÏóÒýÓÃ</param>
+            <returns>·´ÐòÁÐ»¯ÊÇ·ñ³É¹¦</returns>
+        </member>
+        <member name="M:codest.SerializableBaseClass`1.Copy">
+            <summary>
+            Íê³É¶ÔÏóµÄÇ³¸´ÖÆ
+            </summary>
+            <returns>¶ÔÏóµÄ¸±±¾</returns>
+        </member>
+        <member name="M:codest.SerializableBaseClass`1.Clone">
+            <summary>
+            Íê³É¶ÔÏóµÄÇ³¸´ÖÆ
+            </summary>
+            <returns>¶ÔÏóµÄ¸±±¾</returns>
+        </member>
+        <member name="T:codest.Data.OleDbUpdater">
+            <summary>
+            OleDbÊý¾Ý¿â¸üÐÂÆ÷
+            </summary>
+        </member>
+        <member name="F:codest.Data.OleDbUpdater.dataManager">
+            <summary>
+            µ±Ç°¸üÐÂÆ÷ËùÊ¹ÓÃµÄÊý¾Ý¿â¹ÜÀíÆ÷
+            </summary>
+        </member>
+        <member name="F:codest.Data.OleDbUpdater._dap">
+            <summary>
+            µ±ÓÐ¸üÐÂ²Ù×÷Ê±£¬ÓÃÀ´±£´æÊý¾ÝÐÅÏ¢
+            </summary>
+        </member>
+        <member name="F:codest.Data.OleDbUpdater._cmdb">
+            <summary>
+            µ±ÓÐ¸üÐÂ²Ù×÷Ê±£¬ÅäºÏOleDbDataAdapterÊ¹ÓÃ
+            </summary>
+        </member>
+        <member name="M:codest.Data.OleDbUpdater.#ctor(System.Int32,codest.Data.OleDbManager)">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+            <param name="id">ÈÝÆ÷ÖÐÎ¨Ò»µÄ¸üÐÂÆ÷ID</param>
+            <param name="manager">Êý¾Ý¿â¹ÜÀíÆ÷</param>
+        </member>
+        <member name="M:codest.Data.OleDbUpdater.Finalize">
+            <summary>
+            Îö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Data.OleDbUpdater.Dispose(System.Boolean)">
+            <summary>
+            ÊÍ·ÅÓÉµ±Ç°¶ÔÏó¿ØÖÆµÄËùÓÐ×ÊÔ´
+            </summary>
+            <param name="disposing">ÏÔÊ½µ÷ÓÃ</param>
+        </member>
+        <member name="M:codest.Data.OleDbUpdater.SelectWithUpdate(System.String)">
+            <summary>
+            Ê¹¶ÔÏó½«½øÈëÐÞ¸ÄÄ£Ê½×´Ì¬
+            ÓÃ»§¿ÉÒÔÐÞ¸Ä·µ»Ø½á¹û£¬°üÀ¨É¾³ý¡¢ÐÞ¸ÄºÍÔö¼ÓÐÐ
+            ÔÙµ÷ÓÃUpdate(DataTable)½øÐÐ¸üÐÂ²Ù×÷
+            ´Ëºó£¬¶ÔÏó½«ÍË³öÐÞ¸ÄÄ£Ê½×´Ì¬
+            </summary>
+            <param name="SQLCmd">SQLÓï¾ä</param>
+            <returns>²éÑ¯ÏìÓ¦½á¹û</returns>
+        </member>
+        <member name="M:codest.Data.OleDbUpdater.InsertMode(System.String)">
+            <summary>
+            Ê¹¶ÔÏó½øÈëÐÞ¸ÄÄ£Ê½
+            ÓÃ»§¿ÉÒÔÔÚ·µ»Ø±í½á¹¹µÄDataTableÖÐÌí¼ÓÊý¾Ý
+            ÔÙµ÷ÓÃUpdate(DataTable)½øÐÐ¸üÐÂ²Ù×÷
+            ´Ëºó£¬¶ÔÏó½«ÍË³öÐÞ¸ÄÄ£Ê½×´Ì¬
+            </summary>
+            <param name="TableName">ÐèÒª²åÈëµÄ±íÃû³Æ</param>
+            <returns>Òª²åÈëÄ¿±ê±íµÄ½á¹¹</returns>
+        </member>
+        <member name="M:codest.Data.OleDbUpdater.Update(System.Data.DataTable)">
+            <summary>
+            ¹Ø±ÕÐÞ¸ÄÄ£Ê½,²¢¸ù¾ÝDataTable½øÐÐ¸üÐÂ²Ù×÷
+            </summary>
+            <param name="DataTableSource">ÒªÌá½»µÄÊý¾Ý±í</param>
+        </member>
+        <member name="M:codest.Data.OleDbUpdater.Release">
+            <summary>
+            ÊÍ·Åµ±Ç°¸üÐÂÆ÷
+            </summary>
+        </member>
+        <member name="T:codest.Data.SQLUpdater">
+            <summary>
+            SQL Server²Ù×÷Êý¾Ý¿â¸üÐÂÆ÷
+            </summary>
+        </member>
+        <member name="F:codest.Data.SQLUpdater.dataManager">
+            <summary>
+            µ±Ç°¸üÐÂÆ÷ËùÊ¹ÓÃµÄÊý¾Ý¿â¹ÜÀíÆ÷
+            </summary>
+        </member>
+        <member name="F:codest.Data.SQLUpdater._dap">
+            <summary>
+            µ±ÓÐ¸üÐÂ²Ù×÷Ê±£¬ÓÃÀ´±£´æÊý¾ÝÐÅÏ¢
+            </summary>
+        </member>
+        <member name="F:codest.Data.SQLUpdater._cmdb">
+            <summary>
+            µ±ÓÐ¸üÐÂ²Ù×÷Ê±£¬ÅäºÏDataAdapterÊ¹ÓÃ
+            </summary>
+        </member>
+        <member name="M:codest.Data.SQLUpdater.#ctor(System.Int32,codest.Data.SQLManager)">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+            <param name="id">ÈÝÆ÷ÖÐÎ¨Ò»µÄID</param>
+            <param name="manager">Êý¾Ý¿â¹ÜÀíÆ÷</param>
+        </member>
+        <member name="M:codest.Data.SQLUpdater.Finalize">
+            <summary>
+            Îö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Data.SQLUpdater.Dispose(System.Boolean)">
+            <summary>
+            ÊÍ·ÅÓÉµ±Ç°¶ÔÏó¿ØÖÆµÄËùÓÐ×ÊÔ´
+            </summary>
+            <param name="disposing">ÏÔÊ½µ÷ÓÃ</param>
+        </member>
+        <member name="M:codest.Data.SQLUpdater.SelectWithUpdate(System.String)">
+            <summary>
+            Ê¹¶ÔÏó½«½øÈëÐÞ¸ÄÄ£Ê½×´Ì¬
+            ÓÃ»§¿ÉÒÔÐÞ¸Ä·µ»Ø½á¹û£¬°üÀ¨É¾³ý¡¢ÐÞ¸ÄºÍÔö¼ÓÐÐ
+            ÔÙµ÷ÓÃUpdate(DataTable)½øÐÐ¸üÐÂ²Ù×÷
+            ´Ëºó£¬¶ÔÏó½«ÍË³öÐÞ¸ÄÄ£Ê½×´Ì¬
+            </summary>
+            <param name="SQLCmd">SQLÓï¾ä</param>
+            <returns>²éÑ¯ÏìÓ¦½á¹û</returns>
+        </member>
+        <member name="M:codest.Data.SQLUpdater.InsertMode(System.String)">
+            <summary>
+            Ê¹¶ÔÏó½øÈëÐÞ¸ÄÄ£Ê½
+            ÓÃ»§¿ÉÒÔÔÚ·µ»Ø±í½á¹¹µÄDataTableÖÐÌí¼ÓÊý¾Ý
+            ÔÙµ÷ÓÃUpdate(DataTable)½øÐÐ¸üÐÂ²Ù×÷
+            ´Ëºó£¬¶ÔÏó½«ÍË³öÐÞ¸ÄÄ£Ê½×´Ì¬
+            </summary>
+            <param name="TableName">ÐèÒª²åÈëµÄ±íÃû³Æ</param>
+            <returns>Òª²åÈëÄ¿±ê±íµÄ½á¹¹</returns>
+        </member>
+        <member name="M:codest.Data.SQLUpdater.Update(System.Data.DataTable)">
+            <summary>
+            ¹Ø±ÕÐÞ¸ÄÄ£Ê½,²¢¸ù¾ÝDataTable½øÐÐ¸üÐÂ²Ù×÷
+            </summary>
+            <param name="DataTableSource">ÒªÌá½»µÄÊý¾Ý±í</param>
+        </member>
+        <member name="M:codest.Data.SQLUpdater.Release">
+            <summary>
+            ÊÍ·Åµ±Ç°¸üÐÂÆ÷¡£
+            Èç¹ûAutoRelease=true£¬Ôòµ÷ÓÃUpdate()ºó»á×Ô¶¯µ÷ÓÃ¸Ã·½·¨¡£
+            </summary>
+        </member>
+        <member name="T:codest.Data.DataUpdater">
+            <summary>
+            ËùÓÐÊý¾Ý¿â¸üÐÂÆ÷µÄ»ùÀà
+            </summary>
+        </member>
+        <member name="P:codest.Data.DataUpdater.AutoRelease">
+            <summary>
+            Ö¸Ê¾µ÷ÓÃUpdate()ºóÊÇ·ñ×Ô¶¯ÊÍ·Åµ±Ç°¸üÐÂÆ÷
+            Ä¬ÈÏÎª£ºtrue
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataUpdater.#ctor(System.Int32)">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+            <param name="id">·ÖÅäÈÝÆ÷ÖÐÎ¨Ò»µÄID</param>
+        </member>
+        <member name="M:codest.Data.DataUpdater.Finalize">
+            <summary>
+            Îö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataUpdater.Dispose(System.Boolean)">
+            <summary>
+            ÊÍ·ÅÓÉµ±Ç°¶ÔÏó¿ØÖÆµÄËùÓÐ×ÊÔ´
+            </summary>
+            <param name="disposing">ÏÔÊ½µ÷ÓÃ</param>
+        </member>
+        <member name="M:codest.Data.DataUpdater.DecideRelease">
+            <summary>
+            ¾ö¶¨ÊÇ·ñ×Ô¶¯ÊÍ·Å¸üÐÂÆ÷
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataUpdater.SelectWithUpdate(System.String)">
+            <summary>
+            Ê¹¶ÔÏó½«½øÈëÐÞ¸ÄÄ£Ê½×´Ì¬
+            ÓÃ»§¿ÉÒÔÐÞ¸Ä·µ»Ø½á¹û£¬°üÀ¨É¾³ý¡¢ÐÞ¸ÄºÍÔö¼ÓÐÐ
+            ÔÙµ÷ÓÃUpdate(DataTable)½øÐÐ¸üÐÂ²Ù×÷
+            ´Ëºó£¬¶ÔÏó½«ÍË³öÐÞ¸ÄÄ£Ê½×´Ì¬
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataUpdater.InsertMode(System.String)">
+            <summary>
+            Ê¹¶ÔÏó½øÈëÐÞ¸ÄÄ£Ê½
+            ÓÃ»§¿ÉÒÔÔÚ·µ»Ø±í½á¹¹µÄDataTableÖÐÌí¼ÓÊý¾Ý
+            ÔÙµ÷ÓÃUpdate(DataTable)½øÐÐ¸üÐÂ²Ù×÷
+            ´Ëºó£¬¶ÔÏó½«ÍË³öÐÞ¸ÄÄ£Ê½×´Ì¬
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataUpdater.Update(System.Data.DataTable)">
+            <summary>
+            ¹Ø±ÕÐÞ¸ÄÄ£Ê½,²¢¸ù¾ÝDataTable½øÐÐ¸üÐÂ²Ù×÷
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataUpdater.Release">
+            <summary>
+            ÊÍ·Åµ±Ç°¸üÐÂÆ÷
+            </summary>
+        </member>
+        <member name="T:codest.Data.DataManager">
+            <summary>
+            ËùÓÐÊý¾Ý¿â¹ÜÀíÆ÷µÄ»ùÀà
+            </summary>
+        </member>
+        <member name="F:codest.Data.DataManager.dataUpdaterColl">
+            <summary>
+            ±£´æµ±Ç°¹ÜÀíÆ÷ÖÐËùÓÐÒÑ·ÖÅäµÄ¸üÐÂÆ÷
+            </summary>
+        </member>
+        <member name="P:codest.Data.DataManager.ConnString">
+            <summary>
+            »ñÈ¡»òÉèÖÃÊý¾Ý¿âÁ¬½Ó×Ö·û´®
+            </summary>
+        </member>
+        <member name="P:codest.Data.DataManager.ExecNum">
+            <summary>
+            »ñÈ¡µ±Ç°Êý¾Ý¿âÁ¬½Ó²éÑ¯µÄ´ÎÊý
+            </summary>
+        </member>
+        <member name="P:codest.Data.DataManager.DataSource">
+            <summary>
+            »ñÈ¡»òÖ¸¶¨Êý¾Ý¿âÔ´
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.#ctor">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.Finalize">
+            <summary>
+            Îö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.Dispose(System.Boolean)">
+            <summary>
+            ÊÍ·ÅÓÉµ±Ç°¶ÔÏó¿ØÖÆµÄËùÓÐ×ÊÔ´
+            </summary>
+            <param name="disposing">ÏÔÊ½µ÷ÓÃ</param>
+        </member>
+        <member name="M:codest.Data.DataManager.Open">
+            <summary>
+            ´ò¿ªÊý¾Ý¿â
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.OpenByConnString">
+            <summary>
+            Ê¹ÓÃÊý¾Ý¿âÁ¬½Ó×Ö·û´®´ò¿ªÊý¾Ý¿â
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.Close">
+            <summary>
+            ¹Ø±ÕSQLÁ¬½Ó
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.Exec(System.String)">
+            <summary>
+            Ö´ÐÐSQLÓï¾ä
+            </summary>
+            <param name="SQLCmd">SQLÓï¾ä</param>
+            <returns>ÊÜÏìÓ¦µÄÐÐÊý</returns>
+        </member>
+        <member name="M:codest.Data.DataManager.Select(System.String)">
+            <summary>
+            Ö´ÐÐSQLÓï¾ä£¬½«ÏìÓ¦µÄÊý¾ÝÌî³äµ½DataTableÖÐ£¬²»ÄÜ½øÐÐ¸üÐÂ²Ù×÷
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.Select(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Ñ¡ÔñÒ»¶¨·¶Î§¼ÇÂ¼µÄSelectÓï¾ä
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.SelectPage(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            ÊµÏÖ·ÖÒ³µÄSelect
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.Delete(System.String)">
+            <summary>
+            Ö´ÐÐÉ¾³ý²Ù×÷µÄSQLÓï¾ä
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.AllocateDataUpdater">
+            <summary>
+            ·ÖÅäÒ»¸ö¸üÐÂÆ÷
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Data.DataManager.ReleaseAllDataUpdater">
+            <summary>
+            ÊÍ·Åµ±Ç°ÊµÀýÖÐËùÓÐµÄ¸üÐÂÆ÷
+            </summary>
+        </member>
+        <member name="M:codest.Data.DataManager.ReleaseDataUpdater(codest.Data.DataUpdater)">
+            <summary>
+            ÊÍ·ÅÒ»¸ö¸üÐÂÆ÷
+            </summary>
+            <param name="updater">¸üÐÂÆ÷</param>
+        </member>
+        <member name="T:codest.Data.OleDbManager">
+            <summary>
+            OleDb(默认Access)数据库数据库管理器
+            </summary>
+        </member>
+        <member name="M:codest.Data.OleDbManager.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:codest.Data.OleDbManager.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dataSource">设置数据源</param>
+        </member>
+        <member name="M:codest.Data.OleDbManager.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:codest.Data.OleDbManager.Dispose(System.Boolean)">
+            <summary>
+            释放由当前对象控制的所有资源
+            </summary>
+            <param name="disposing">显式调用</param>
+        </member>
+        <member name="M:codest.Data.OleDbManager.Open(System.String)">
+            <summary>
+            打开指定Access数据库文件
+            </summary>
+            <param name="DataSource"></param>
+        </member>
+        <member name="M:codest.Data.OleDbManager.Open">
+            <summary>
+            打开已经设定好的Access数据库文件
+            </summary>
+        </member>
+        <member name="M:codest.Data.OleDbManager.OpenByConnString">
+            <summary>
+            使用数据库连接字符串打开数据库
+            </summary>
+        </member>
+        <member name="M:codest.Data.OleDbManager.Close">
+            <summary>
+            关闭SQL连接
+            </summary>
+        </member>
+        <member name="M:codest.Data.OleDbManager.Exec(System.String)">
+            <summary>
+            执行SQL语句
+            </summary>
+            <param name="SQLCmd">SQL语句</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:codest.Data.OleDbManager.Select(System.String)">
+            <summary>
+            执行SQL语句，将响应的数据填充到DataTable中，不能进行更新操作
+            </summary>
+            <param name="SQLCmd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Data.OleDbManager.Select(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            选择一定范围记录的Select语句
+            </summary>
+            <param name="SQLCmd"></param>
+            <param name="srcTalbe"></param>
+            <param name="startRecord"></param>
+            <param name="maxRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Data.OleDbManager.SelectPage(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            实现分页的Select
+            </summary>
+            <param name="SQLCmd"></param>
+            <param name="srcTalbe"></param>
+            <param name="pageSize"></param>
+            <param name="pageID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Data.OleDbManager.Delete(System.String)">
+            <summary>
+            执行删除操作的SQL语句
+            </summary>
+            <param name="SQLCmd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Data.OleDbManager.AllocateDataUpdater">
+            <summary>
+            分配一个新的更新器
+            </summary>
+            <returns>OleDb更新器</returns>
+        </member>
+        <member name="T:codest.Data.SQLManager">
+            <summary>
+            SQL ServerÊý¾Ý¿â¹ÜÀíÆ÷
+            </summary>
+        </member>
+        <member name="P:codest.Data.SQLManager.Database">
+            <summary>
+            ¿âÃû³Æ
+            </summary>
+        </member>
+        <member name="P:codest.Data.SQLManager.Username">
+            <summary>
+            Á¬½ÓSQL ServerÊý¾Ý¿âµÄÓÃ»§Ãû
+            </summary>
+        </member>
+        <member name="P:codest.Data.SQLManager.Password">
+            <summary>
+            Á¬½ÓSQL ServerÊý¾Ý¿âµÄÃÜÂë
+            </summary>
+        </member>
+        <member name="M:codest.Data.SQLManager.#ctor">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Data.SQLManager.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+            <param name="dataSource">SQL ServerÊý¾ÝÔ´£¨IPµØÖ·£©</param>
+            <param name="database">¿âÃû³Æ</param>
+            <param name="usr">ÓÃ»§Ãû</param>
+            <param name="pwd">ÃÜÂë</param>
+        </member>
+        <member name="M:codest.Data.SQLManager.Finalize">
+            <summary>
+            Îö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Data.SQLManager.Dispose(System.Boolean)">
+            <summary>
+            ÊÍ·ÅÓÉµ±Ç°¶ÔÏó¿ØÖÆµÄËùÓÐ×ÊÔ´
+            </summary>
+            <param name="disposing">ÏÔÊ½µ÷ÓÃ</param>
+        </member>
+        <member name="M:codest.Data.SQLManager.Open(System.String,System.String,System.String,System.String)">
+            <summary>
+            ´ò¿ªÊý¾Ý¿âÁ¬½Ó
+            </summary>
+            <param name="dataSource">SQL ServerÊý¾ÝÔ´£¨IPµØÖ·£©</param>
+            <param name="database">¿âÃû³Æ</param>
+            <param name="usr">ÓÃ»§Ãû</param>
+            <param name="pwd">ÃÜÂë</param>
+        </member>
+        <member name="M:codest.Data.SQLManager.Open">
+            <summary>
+            ´ò¿ªÊý¾Ý¿âÁ¬½Ó
+            </summary>
+        </member>
+        <member name="M:codest.Data.SQLManager.OpenByConnString">
+            <summary>
+            Ê¹ÓÃÊý¾Ý¿âÁ¬½Ó×Ö·û´®´ò¿ªÊý¾Ý¿â
+            </summary>
+        </member>
+        <member name="M:codest.Data.SQLManager.Close">
+            <summary>
+            ¹Ø±ÕSQLÁ¬½Ó
+            </summary>
+        </member>
+        <member name="M:codest.Data.SQLManager.Exec(System.String)">
+            <summary>
+            Ö´ÐÐSQLÓï¾ä
+            </summary>
+            <param name="SQLCmd">SQLÓï¾ä</param>
+            <returns>ÊÜÓ°ÏìµÄÐÐÊý</returns>
+        </member>
+        <member name="M:codest.Data.SQLManager.Select(System.String)">
+            <summary>
+            Ö´ÐÐSQLÓï¾ä£¬½«ÏìÓ¦µÄÊý¾ÝÌî³äµ½DataTableÖÐ£¬²»ÄÜ½øÐÐ¸üÐÂ²Ù×÷
+            </summary>
+            <param name="SQLCmd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Data.SQLManager.Select(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Ñ¡ÔñÒ»¶¨·¶Î§¼ÇÂ¼µÄSelectÓï¾ä
+            </summary>
+            <param name="SQLCmd"></param>
+            <param name="srcTalbe"></param>
+            <param name="startRecord"></param>
+            <param name="maxRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Data.SQLManager.SelectPage(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            ÊµÏÖ·ÖÒ³µÄSelect
+            </summary>
+            <param name="SQLCmd"></param>
+            <param name="srcTalbe"></param>
+            <param name="pageSize"></param>
+            <param name="pageID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Data.SQLManager.Delete(System.String)">
+            <summary>
+            Ö´ÐÐÉ¾³ý²Ù×÷µÄSQLÓï¾ä
+            </summary>
+            <param name="SQLCmd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:codest.Data.SQLManager.AllocateDataUpdater">
+            <summary>
+            ·ÖÅäÒ»¸öÐÂµÄSQL¸üÐÂÆ÷
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:codest.Encode.DESEncrypt">
+            <summary>
+            ÊµÏÖÊý¾ÝµÄDES¼ÓÃÜ½âÃÜ
+            </summary>
+        </member>
+        <member name="F:codest.Encode.DESEncrypt.keys">
+            <summary>
+            ¹Ì»¯µÄ¼ÓÃÜ½âÃÜÊý¾Ý
+            </summary>
+        </member>
+        <member name="F:codest.Encode.DESEncrypt.encryptKey">
+            <summary>
+            ÃÜÔ¿
+            </summary>
+        </member>
+        <member name="P:codest.Encode.DESEncrypt.Keys">
+            <summary>
+            ÄÚ²¿¹Ì»¯¼ÓÃÜKey
+            </summary>
+        </member>
+        <member name="P:codest.Encode.DESEncrypt.EncryptKey">
+            <summary>
+            ÃÜÔ¿
+            </summary>
+        </member>
+        <member name="M:codest.Encode.DESEncrypt.#ctor">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Encode.DESEncrypt.#ctor(System.String)">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+            <param name="encryptKey">ÃÜÔ¿</param>
+        </member>
+        <member name="M:codest.Encode.DESEncrypt.Finalize">
+            <summary>
+            Îö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Encode.DESEncrypt.Encrypt(System.String)">
+            <summary>
+            ¼ÓÃÜÊý¾Ý
+            </summary>
+            <param name="srcData">Òª¼ÓÃÜµÄ×Ö·û´®</param>
+            <returns>¼ÓÃÜ¹ýµÄÊý¾Ý</returns>
+        </member>
+        <member name="M:codest.Encode.DESEncrypt.Encrypt(System.Byte[])">
+            <summary>
+            ¼ÓÃÜÊý¾Ý
+            </summary>
+            <param name="srcData">Òª¼ÓÃÜµÄÊý¾ÝÁ÷</param>
+            <returns>¼ÓÃÜ¹ýµÄÊý¾Ý</returns>
+        </member>
+        <member name="M:codest.Encode.DESEncrypt.Decrypt(System.String)">
+            <summary>
+            ½âÃÜÊý¾Ý
+            </summary>
+            <param name="srcData">ÐèÒª½âÃÜµÄÊý¾Ý</param>
+            <returns>½âÃÜºóµÄÊý¾Ý</returns>
+        </member>
+        <member name="M:codest.Encode.DESEncrypt.Decrypt(System.Byte[])">
+            <summary>
+            ½âÃÜÊý¾Ý
+            </summary>
+            <param name="srcData">ÐèÒª½âÃÜµÄÊý¾Ý</param>
+            <returns>½âÃÜºóµÄÊý¾Ý</returns>
+        </member>
+        <member name="T:codest.Encode.DSAEncrypt">
+            <summary>
+            ÊµÏÖ¶ÔÊý¾Ý½øÐÐDSAÇ©ÃûºÍÑéÖ¤
+            </summary>
+        </member>
+        <member name="F:codest.Encode.DSAEncrypt.dsac">
+            <summary>
+            Ìá¹©DSAËã·¨
+            </summary>
+        </member>
+        <member name="M:codest.Encode.DSAEncrypt.#ctor">
+            <summary>
+            ¹¹Ôìº¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Encode.DSAEncrypt.Finalize">
+            <summary>
+            Îö¹¹º¯Êý
+            </summary>
+        </member>
+        <member name="M:codest.Encode.DSAEncrypt.GetSignature(System.String)">
+            <summary>
+            ¶Ô×Ö·û´®Êý¾Ý½øÐÐÇ©Ãû
+            </summary>
+            <param name="srcData">×Ö·û´®Êý¾Ý</param>
+            <returns>DSAÇ©Ãû</returns>
+        </member>
+        <member name="M:codest.Encode.DSAEncrypt.GetSignature(System.Byte[])">
+            <summary>
+            ¶Ô¶þ½øÖÆÊý¾Ý½øÐÐÇ©Ãû
+            </summary>
+            <param name="srcData">¶þ½øÖÆÊý¾Ý</param>
+            <returns>DSAÇ©Ãû</returns>
+        </member>
+        <member name="M:codest.Encode.DSAEncrypt.VerifySignature(System.Byte[],System.Byte[])">
+            <summary>
+            ÑéÖ¤Ç©Ãû
+            </summary>
+            <param name="srcData">ÐèÒªÑéÖ¤µÄÊý¾Ý</param>
+            <param name="signature">DSAÇ©Ãû</param>
+            <returns>Ç©ÃûÊÇ·ñÕýÈ·</returns>
+        </member>
+        <member name="M:codest.Encode.DSAEncrypt.VerifySignature(System.String,System.Byte[])">
+            <summary>
+            ÑéÖ¤Ç©Ãû
+            </summary>
+            <param name="srcData">ÐèÒªÑéÖ¤µÄÊý¾Ý</param>
+            <param name="signature">DSAÇ©Ãû</param>
+            <returns>Ç©ÃûÊÇ·ñÕýÈ·</returns>
+        </member>
+        <member name="T:codest.Globalization">
+            <summary>
+            ³£Ê¹ÓÃµÄ¹«¹²³£Êý
+            </summary>
+        </member>
+    </members>
+</doc>

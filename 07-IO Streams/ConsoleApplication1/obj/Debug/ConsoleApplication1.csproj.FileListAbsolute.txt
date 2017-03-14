@@ -1,0 +1,8 @@
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\ConsoleApplication1\bin\Debug\IOStreams.dll
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\ConsoleApplication1\bin\Debug\IOStreams.pdb
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
