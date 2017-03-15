@@ -3,3 +3,8 @@ D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfb
 D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\IOStreams\obj\Debug\IOStreams.csprojResolveAssemblyReference.cache
 D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\IOStreams\obj\Debug\IOStreams.dll
 D:\Учеба\C# training\net-training-tasks\aorgish-net-training-tasks-32449dfbbae5\07-IO Streams\IOStreams\obj\Debug\IOStreams.pdb
+D:\Учеба\C# training\net-training-tasks\07-IO Streams\IOStreams\bin\Debug\IOStreams.dll
+D:\Учеба\C# training\net-training-tasks\07-IO Streams\IOStreams\bin\Debug\IOStreams.pdb
+D:\Учеба\C# training\net-training-tasks\07-IO Streams\IOStreams\obj\Debug\IOStreams.csprojResolveAssemblyReference.cache
+D:\Учеба\C# training\net-training-tasks\07-IO Streams\IOStreams\obj\Debug\IOStreams.dll
+D:\Учеба\C# training\net-training-tasks\07-IO Streams\IOStreams\obj\Debug\IOStreams.pdb

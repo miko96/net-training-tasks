@@ -59,8 +59,19 @@ namespace IOStreams
         /// <returns></returns>
         public static string CalculateHash(this Stream stream, string hashAlgorithmName)
         {
-            // TODO : Implement CalculateHash method
-            throw new NotImplementedException();
+            try
+            {
+                HashAlgorithm hashAlgorithm = HashAlgorithm.Create(hashAlgorithmName);
+                byte[] hash = hashAlgorithm.ComputeHash(stream);
+                string hashString = "";
+                foreach (var chr in hash)
+                    hashString += chr.ToString("X2");
+                return hashString;
+            }
+            catch
+            { 
+                throw new ArgumentException();
+            }
         }
 
 
@@ -72,8 +83,17 @@ namespace IOStreams
         /// <returns>output stream</returns>
         public static Stream DecompressStream(string fileName, DecompressionMethods method)
         {
-            // TODO : Implement DecompressStream method
-            throw new NotImplementedException();
+           var fileStream = File.Open(fileName, FileMode.Open);
+
+            switch(method)
+            {
+                case (DecompressionMethods.Deflate):
+                    return new DeflateStream(fileStream, CompressionMode.Decompress);
+                case(DecompressionMethods.GZip):
+                    return new GZipStream(fileStream, CompressionMode.Decompress);
+                default:
+                    return fileStream;                   
+            }
         }
 
 
@@ -85,8 +105,7 @@ namespace IOStreams
         /// <returns>Unicoded file content</returns>
         public static string ReadEncodedText(string fileName, string encoding)
         {
-            // TODO : Implement ReadEncodedText method
-            throw new NotImplementedException();
+            return File.ReadAllText(fileName, Encoding.GetEncoding(encoding));
         }
     }
 
