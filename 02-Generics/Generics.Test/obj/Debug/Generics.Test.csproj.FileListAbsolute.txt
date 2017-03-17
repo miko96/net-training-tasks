@@ -1,0 +1,8 @@
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics.Test\bin\Debug\Generics.Test.dll
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics.Test\bin\Debug\Generics.Test.pdb
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics.Test\bin\Debug\Generics.dll
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics.Test\bin\Debug\Generics.pdb
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics.Test\obj\Debug\Generics.Test.csprojResolveAssemblyReference.cache
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics.Test\obj\Debug\Generics.Test.dll
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics.Test\obj\Debug\Generics.Test.pdb

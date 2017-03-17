@@ -1,0 +1,5 @@
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics\bin\Debug\Generics.dll
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics\bin\Debug\Generics.pdb
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics\obj\Debug\Generics.dll
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics\obj\Debug\Generics.pdb
+D:\Учеба\C# training\net-training-tasks\02-Generics\Generics\obj\Debug\Generics.csprojResolveAssemblyReference.cache
