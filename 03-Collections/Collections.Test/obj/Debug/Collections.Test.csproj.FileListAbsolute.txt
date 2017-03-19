@@ -1,0 +1,8 @@
+D:\Учеба\C# training\net-training-tasks\03-Collections\Collections.Test\obj\Debug\Collections.Test.csprojResolveAssemblyReference.cache
+D:\Учеба\C# training\net-training-tasks\03-Collections\Collections.Test\bin\Debug\Collections.Test.dll
+D:\Учеба\C# training\net-training-tasks\03-Collections\Collections.Test\bin\Debug\Collections.Test.pdb
+D:\Учеба\C# training\net-training-tasks\03-Collections\Collections.Test\bin\Debug\Collections.dll
+D:\Учеба\C# training\net-training-tasks\03-Collections\Collections.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Учеба\C# training\net-training-tasks\03-Collections\Collections.Test\bin\Debug\Collections.pdb
+D:\Учеба\C# training\net-training-tasks\03-Collections\Collections.Test\obj\Debug\Collections.Test.dll
+D:\Учеба\C# training\net-training-tasks\03-Collections\Collections.Test\obj\Debug\Collections.Test.pdb

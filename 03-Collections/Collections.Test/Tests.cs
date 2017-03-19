@@ -166,10 +166,12 @@ namespace Collections.Test {
                 new[] { 1 },
                 "DepthTraversalTree should return the root if root has no children"
                 );
-            
+
             DepthTraversalTreeTest(
-                new IntNode() { Data = 1, 
-                    Children = new[] { 
+                new IntNode()
+                {
+                    Data = 1,
+                    Children = new[] {
                         new IntNode() { Data = 12},
                         new IntNode() { Data = 13},
                         new IntNode() { Data = 14},
@@ -180,9 +182,10 @@ namespace Collections.Test {
                 );
 
             DepthTraversalTreeTest(
-                new IntNode() {
+                new IntNode()
+                {
                     Data = 1,
-                    Children = new[] { 
+                    Children = new[] {
                         new IntNode() { Data = 12},
                         new IntNode() { Data = 13 , Children = new[] {
                             new IntNode() { Data = 131 },
@@ -198,7 +201,7 @@ namespace Collections.Test {
                 new[] { 1, 12, 13, 131, 132, 133, 1331, 1332, 14 },
                 "DepthTraversalTree should return the right result"
                 );
-            
+
             DepthTraversalTreeTest(CreateDeepTree(), Enumerable.Range(1, MaxNodeCount), "DepthTraversalTree should proceed a deep tree");
             DepthTraversalTreeTest(CreateWideTree(), Enumerable.Range(1, MaxNodeCount), "DepthTraversalTree should proceed a wide tree");
         }
