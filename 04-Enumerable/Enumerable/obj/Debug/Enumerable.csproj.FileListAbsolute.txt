@@ -1,0 +1,5 @@
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\Enumerable\bin\Debug\Enumerable.dll
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\Enumerable\bin\Debug\Enumerable.pdb
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\Enumerable\obj\Debug\Enumerable.csprojResolveAssemblyReference.cache
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\Enumerable\obj\Debug\Enumerable.dll
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\Enumerable\obj\Debug\Enumerable.pdb

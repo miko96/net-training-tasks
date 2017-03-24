@@ -1,0 +1,8 @@
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\EnumerableTest\bin\Debug\EnumerableTest.dll
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\EnumerableTest\bin\Debug\EnumerableTest.pdb
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\EnumerableTest\bin\Debug\Enumerable.dll
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\EnumerableTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\EnumerableTest\bin\Debug\Enumerable.pdb
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\EnumerableTest\obj\Debug\EnumerableTest.csprojResolveAssemblyReference.cache
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\EnumerableTest\obj\Debug\EnumerableTest.dll
+D:\Учеба\C# training\net-training-tasks\04-Enumerable\EnumerableTest\obj\Debug\EnumerableTest.pdb
