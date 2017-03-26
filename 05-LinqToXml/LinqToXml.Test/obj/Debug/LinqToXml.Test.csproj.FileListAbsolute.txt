@@ -1,0 +1,10 @@
+D:\Учеба\C# training\net-training-tasks\05-LinqToXml\LinqToXml.Test\bin\Debug\LinqToXml.Test.dll
+D:\Учеба\C# training\net-training-tasks\05-LinqToXml\LinqToXml.Test\bin\Debug\LinqToXml.Test.pdb
+D:\Учеба\C# training\net-training-tasks\05-LinqToXml\LinqToXml.Test\bin\Debug\LinqToXml.dll
+D:\Учеба\C# training\net-training-tasks\05-LinqToXml\LinqToXml.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Учеба\C# training\net-training-tasks\05-LinqToXml\LinqToXml.Test\bin\Debug\LinqToXml.pdb
+D:\Учеба\C# training\net-training-tasks\05-LinqToXml\LinqToXml.Test\obj\Debug\LinqToXml.Test.csprojResolveAssemblyReference.cache
+D:\Учеба\C# training\net-training-tasks\05-LinqToXml\LinqToXml.Test\obj\Debug\LinqToXml.Test.LinqToXmlResources.resources
+D:\Учеба\C# training\net-training-tasks\05-LinqToXml\LinqToXml.Test\obj\Debug\LinqToXml.Test.csproj.GenerateResource.Cache
+D:\Учеба\C# training\net-training-tasks\05-LinqToXml\LinqToXml.Test\obj\Debug\LinqToXml.Test.dll
+D:\Учеба\C# training\net-training-tasks\05-LinqToXml\LinqToXml.Test\obj\Debug\LinqToXml.Test.pdb
