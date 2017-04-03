@@ -1,0 +1,5 @@
+D:\Projects\net-training-tasks\08-AsyncIO\AsyncIO\bin\Debug\AsyncIO.dll
+D:\Projects\net-training-tasks\08-AsyncIO\AsyncIO\bin\Debug\AsyncIO.pdb
+D:\Projects\net-training-tasks\08-AsyncIO\AsyncIO\obj\Debug\AsyncIO.csprojResolveAssemblyReference.cache
+D:\Projects\net-training-tasks\08-AsyncIO\AsyncIO\obj\Debug\AsyncIO.dll
+D:\Projects\net-training-tasks\08-AsyncIO\AsyncIO\obj\Debug\AsyncIO.pdb

@@ -1,0 +1,5 @@
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tasks\bin\Debug\Serialization.Tasks.dll
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tasks\bin\Debug\Serialization.Tasks.pdb
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tasks\obj\Debug\Serialization.Tasks.csprojResolveAssemblyReference.cache
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tasks\obj\Debug\Serialization.Tasks.dll
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tasks\obj\Debug\Serialization.Tasks.pdb

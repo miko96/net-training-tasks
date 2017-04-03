@@ -1,0 +1,8 @@
+D:\Projects\net-training-tasks\10-Reflection\Reflection.Tests\bin\Debug\Reflection.dll
+D:\Projects\net-training-tasks\10-Reflection\Reflection.Tests\bin\Debug\Reflection.pdb
+D:\Projects\net-training-tasks\10-Reflection\Reflection.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Projects\net-training-tasks\10-Reflection\Reflection.Tests\bin\Debug\Reflection.Tasks.dll
+D:\Projects\net-training-tasks\10-Reflection\Reflection.Tests\bin\Debug\Reflection.Tasks.pdb
+D:\Projects\net-training-tasks\10-Reflection\Reflection.Tests\obj\Debug\Reflection.Tests.csprojResolveAssemblyReference.cache
+D:\Projects\net-training-tasks\10-Reflection\Reflection.Tests\obj\Debug\Reflection.dll
+D:\Projects\net-training-tasks\10-Reflection\Reflection.Tests\obj\Debug\Reflection.pdb

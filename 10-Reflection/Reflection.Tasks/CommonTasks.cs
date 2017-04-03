@@ -16,8 +16,11 @@ namespace Reflection.Tasks
         /// <param name="assemblyName">name of assembly</param>
         /// <returns>List of public but obsolete classes</returns>
         public static IEnumerable<string> GetPublicObsoleteClasses(string assemblyName) {
-            // TODO : Implement GetPublicObsoleteClasses method
-            throw new NotImplementedException();
+            var assembly = Assembly.Load(assemblyName);
+            return assembly.GetExportedTypes()
+                .Where(t => t.IsClass && 
+                            t.GetCustomAttributes(false).Any(a => a.GetType() == typeof(ObsoleteAttribute)))
+                .Select(t => t.Name);
         }
 
         /// <summary>
@@ -38,8 +41,14 @@ namespace Reflection.Tasks
         /// <param name="propertyPath">dot-separated property path</param>
         /// <returns>property value of obj for required propertyPath</returns>
         public static T GetPropertyValue<T>(this object obj, string propertyPath) {
-            // TODO : Implement GetPropertyValue method
-            throw new NotImplementedException();
+            var currentType = obj.GetType();
+            foreach (string propertyName in propertyPath.Split('.'))
+            {
+                PropertyInfo property = currentType.GetProperty(propertyName);
+                obj = property.GetValue(obj, null);               
+                currentType = property.PropertyType;
+            }
+            return (T)obj;
         }
 
 
@@ -60,7 +69,18 @@ namespace Reflection.Tasks
         /// <param name="propertyPath">dot-separated property path</param>
         /// <param name="value">assigned value</param>
         public static void SetPropertyValue(this object obj, string propertyPath, object value) {
-            // TODO : Implement SetPropertyValue method
+            //var currentType = obj.GetType();
+            //foreach (string propertyName in propertyPath.Split('.'))
+            //{
+            //    PropertyInfo property = currentType.GetProperty(propertyName);
+            //    obj = property.GetValue(obj, null);
+            //    currentType = property.PropertyType;
+            //}
+
+            //var f = obj.GetType().BaseType;
+            ////property.SetValue(obj, value, BindingFlags.NonPublic | BindingFlags.Instance, null, null, null);
+
+            ////int i = 0;
             throw new NotImplementedException();
         }
 

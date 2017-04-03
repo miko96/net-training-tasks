@@ -118,7 +118,7 @@ namespace AsyncIO.Tests
             Trace.WriteLine("Time : " + sw.Elapsed.ToString());
             Assert.IsTrue(actual
                 .Zip(sites, (content, site) => content.IndexOf(site, StringComparison.InvariantCultureIgnoreCase) > 0)
-                .All(x=>x));
+                .All(x => x));
         }
 
         private void Check_Is_Action_Asynchronous(Action<Uri> action, bool shouldbeAsync)

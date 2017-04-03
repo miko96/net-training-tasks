@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -20,8 +21,8 @@ namespace AsyncIO
         /// <returns>The sequence of downloaded url content</returns>
         public static IEnumerable<string> GetUrlContent(this IEnumerable<Uri> uris) 
         {
-            // TODO : Implement GetUrlContent
-            throw new NotImplementedException();
+            //return Enumerable.Empty<string>();
+            return uris.Select(uri => new WebClient().DownloadString(uri));
         }
 
 
@@ -37,8 +38,22 @@ namespace AsyncIO
         /// <returns>The sequence of downloaded url content</returns>
         public static IEnumerable<string> GetUrlContentAsync(this IEnumerable<Uri> uris, int maxConcurrentStreams)
         {
-            // TODO : Implement GetUrlContentAsync
-            throw new NotImplementedException();
+            //var tasks = uris.Take(maxConcurrentStreams)
+            //    .Select(async uri => await new WebClient().DownloadStringTaskAsync(uri))
+            //    .ToArray();
+
+            //foreach (var uri in uris.Skip(5))
+            //{
+            //    var i = Task.WaitAny(tasks);
+            //    var res = tasks[i].Result;
+            //    tasks[i] = new WebClient().DownloadStringTaskAsync(uri);
+            //    yield return res;
+            //}
+            //Task.WaitAll(tasks);
+            //foreach (var t in tasks)
+            //    yield return t.Result;
+            var a = uris.Select(uri => new WebClient().DownloadString(uri)).ToArray();
+            throw new  NotImplementedException();
         }
 
 
@@ -50,10 +65,15 @@ namespace AsyncIO
         /// </summary>
         /// <param name="resource">Uri of resource</param>
         /// <returns>MD5 hash</returns>
-        public static Task<string> GetMD5Async(this Uri resource)
+        public static async Task<string> GetMD5Async(this Uri resource)
         {
-            // TODO : Implement GetMD5Async
-            throw new NotImplementedException();
+            var data = await new WebClient().DownloadDataTaskAsync(resource);
+            return await Task.Run(() =>
+            {
+                var byteHash = new MD5CryptoServiceProvider().ComputeHash(data);
+                var hashChars = byteHash.Select(b => b.ToString("X2"));
+                return string.Join("", hashChars);
+            });
         }
 
     }

@@ -1,0 +1,10 @@
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tests\bin\Debug\Resources\GoogleSearchJson.txt
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tests\bin\Debug\Resources\CLR-ETW.man
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tests\bin\Debug\Serialization.Tests.dll
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tests\bin\Debug\Serialization.Tests.pdb
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tests\bin\Debug\Serialization.Tasks.dll
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tests\bin\Debug\Serialization.Tasks.pdb
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tests\obj\Debug\Serialization.Tests.csprojResolveAssemblyReference.cache
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tests\obj\Debug\Serialization.Tests.dll
+D:\Projects\net-training-tasks\09-Serialization\Serialization.Tests\obj\Debug\Serialization.Tests.pdb
